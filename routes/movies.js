@@ -30,7 +30,7 @@ router.get('/', function(req, res) {
     res.render('pelisPrefes');
   });
 
-router.post('/store', controller.store);
+router.post('/store-user', controller.storeUser);
 
 
 
