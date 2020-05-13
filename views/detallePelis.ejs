@@ -9,29 +9,8 @@
     <link rel="stylesheet" href="/css/headerfooter.css">
   </head>
   <body>
-    <header>
-        <a href="/movies"><p class="logo">Apriori Movie</p></a>
-        <div class="datosyBuscador">
-          <form action="/movies/buscador" method="GET" class="buscador">
-             <input type="text" name="buscar" class="buscar" placeholder="Buscar">
-          </form>
-           <div class="derecha">
-              <ul class="menuGrande">
-                     <li><a href="/movies/login" class="login">Ingresar</a></li>
-                     <li><p class="nameUsuario"> </p></li>
-                     <li><a href="/movies/pelisPrefes" class="pelisPrefes">Peliculas favoritas</a></li>
-                     <li><a href="/movies/generos" class="linkgeneros">Géneros</a></li>
-              </ul>
-              <div id="myLinks">
-                      <a href="/movies/login" class="login">Ingresar</a>
-                      <p class="nameUsuarioMobile"> </p>
-                      <a href="/movies/pelisPrefes" class="pelisPrefesMobile">Peliculas favoritas</a>
-                      <a href="/movies/generos" class="linkgeneros">Géneros</a>
-              </div>
-              <a class="iconmenu" onclick="menuFunction();">Menu</a>
-            </div>
-        </div>
-     </header>
+    <%- include('./partials/header')%>
+
        <div class="detallemovies">
 
 
@@ -54,10 +33,8 @@
       </ul>
     </section>
        </div>
-    <footer>
-      <p>Delfina Villanueva y Esperanza Uranga</p>
-      <img class="logomdb" src="https://www.themoviedb.org/assets/2/v4/logos/312x276-primary-blue-fb50dee3bf664c866fd216e6cee64af33d20707ea3091ddc65c5e8aa4c152eb2.png" alt="">
-    </footer>
+       <%- include('./partials/footer')%>
+
 
 
   </body>
