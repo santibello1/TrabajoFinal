@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-
+const controller = require('../controllers/moviesController');
 
 router.get('/', function(req, res) {
     res.render('home');
@@ -30,7 +30,7 @@ router.get('/', function(req, res) {
     res.render('pelisPrefes');
   });
 
-
+router.post('/store', controller.store);
 
 
 
