@@ -1,0 +1,205 @@
+/* IDEA: CSS HEADER */
+header{
+background-color: #393e46;
+overflow: hidden;
+width: 100%;
+position: fixed;
+top: 0;
+z-index: 10;
+
+}
+a.icon{
+  display: none;
+}
+ p.logo{
+  float: left;
+  font-family: 'Sofia';
+  font-size: 25px;
+  color: #ff4949;
+  padding-left: 15px;
+ }
+
+ div.datosyBuscador{
+   float: right;
+   width: 600px;
+  margin-top: 30px;
+ }
+ a.pelisPrefes{
+   display: none;
+   text-decoration: none;
+   color: #c10000
+ }
+
+ a.linkgeneros , a.pelisPrefes{
+  color: #ff4949;
+  text-decoration: none;
+  font-family: 'ABeeZee';
+  font-size: 20px;
+  /* padding-top: 7%; */
+  /* float: left; */
+ }
+ a.pelisPrefes{
+   /* margin-right: 15px;
+   padding-top: 7%; */
+ }
+ p.nameUsuario{
+  display: none;
+  color: #ff4949;
+  text-decoration: none;
+  font-family: 'ABeeZee';
+  font-size: 20px;
+  margin: 0;
+  /* padding-top: 27px; */
+  /* float: left;
+  padding-right: 5%; */
+   }
+ a.linkgeneros:hover{
+   text-decoration: underline;
+   color: #c10000;
+ }
+a.pelisPrefes:hover{
+  text-decoration: underline;
+  color: #c10000;
+}
+ul.menuGrande{
+  margin: 0;
+  overflow: hidden;
+  padding-left: 0px;
+}
+ul.menuGrande li{
+  /* width: 33.33%; */
+  float: left;
+  margin: 0 30px 0 0;
+  padding-left: 0px;
+}
+  form.buscador{
+  /* padding-top: 6%; */
+  float: right;
+  /* padding-right: 20px; */
+ }
+ div.derecha{
+   /* float: right;
+   width: 40%;
+   overflow: hidden; */
+ }
+form.buscador input.buscar{
+  border-style: solid;
+  border-width: medium;
+  border-color: #ff4949;
+  border-radius: 20px;
+  height: 30px;
+  width: 170px;
+  /* padding-right: 25px; */
+}
+input.buscar::placeholder{
+text-align: center;
+  font-family: 'ABeeZee';
+  font-size: 20px;
+  margin: auto;
+
+}
+form.buscador input.buscar:hover{
+  border-style:solid;
+  border-color: #c10000;
+  border-width: medium;
+}
+
+div a.login{
+  font-family: 'ABeeZee';
+  font-size: 20px;
+  color: #ff4949;
+  /* padding-top: 27px; */
+  text-decoration: none;
+  float: left;
+  /* padding-right: 15px; */
+}
+
+div a.login:hover{
+  text-decoration: underline;
+  color: #c10000;
+}
+
+/* IDEA: CSS FOOTER */
+
+footer{
+  width: 100%;
+  overflow:hidden;
+  height: 15vh;
+  background-color: #393e46;
+  margin-top: 20px;
+  z-index: 10;
+  position: relative;
+  bottom: 0;
+}
+
+footer p{
+  font-family: 'ABeeZee';
+  font-size: 15px;
+  float: left;
+  padding-top: 25px;
+  padding-left: 20px;
+  color: #ff4949;
+}
+
+footer img{
+  width: 75px;
+  float: right;
+  padding-top: 25px;
+  padding-right: 30px;
+  color: #ff4949;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.derecha #myLinks {
+  display: none;
+}
+a.iconmenu{
+  display: none;
+}
+
+
+@media only screen and (max-device-width: 800px){
+    a.iconmenu{
+     text-align: right;
+     display: block;
+     padding-right: 20px;
+    }
+    /* Style the navigation menu */
+    .derecha {
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Hide the links inside the navigation menu (except for logo/home) */
+    .derecha #myLinks, .derecha ul.menuGrande {
+      display: none;
+    }
+
+    /* Style navigation menu links */
+    .derecha a {
+      color: #ff4949;
+      text-decoration: none;
+      font-family: 'ABeeZee';
+      font-size: 20px;
+      /* color: white;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      display: block; */
+    }
+
+    /* Style the active link (or home/logo) */
+    .active {
+      /* background-color: #4CAF50; */
+      /* color: white; */
+    }
+    p.nameUsuarioMobile{
+     display: none;
+     color: #ff4949;
+     text-decoration: none;
+     font-family: 'ABeeZee';
+     font-size: 20px;
+     margin: 0;
+
+      }
+}

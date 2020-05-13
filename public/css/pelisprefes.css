@@ -1,0 +1,43 @@
+*{box-sizing: border-box;}
+body {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  background-color:#dedede  ;
+}
+ul{
+  /* overflow: hidden; */
+  padding-left: 0;
+}
+
+h1{
+  font-family: 'ABeeZee';
+  color: #ff4949;
+  text-align: center;
+  height: 100px;
+  padding-top: 80px;
+  font-size: 40px;
+  margin-left:0;
+}
+header ul.menuGrande{
+  list-style-type: none;
+}
+li img{
+  width: 350px;
+}
+li img:hover{
+  opacity: 0.5;
+  border-color: grey;
+
+}
+a p.movieTitle{
+  text-decoration: none;
+  font-family: 'ABeeZee';
+  color: #ff4949;
+  text-align: center;
+  font-size: 20px;
+}
+li a{
+    text-decoration: none;
+}
