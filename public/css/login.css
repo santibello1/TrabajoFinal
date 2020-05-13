@@ -27,11 +27,16 @@ form.logIn p input{
   height: 30px;
   margin-bottom: 20px;
 }
+form.logIn p label{
+  color: #ff4949;
+}
+
 form.logIn p input:hover{
   border-width: medium;
 }
 form.logIn p input::placeholder{
   font-family: 'ABeeZee';
+  text-align: center;
 }
 form p select{
   border-style: solid;
