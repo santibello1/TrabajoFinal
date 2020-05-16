@@ -2,7 +2,7 @@ window.onload = function () {
   var usuarioLogueado = localStorage.getItem("usuario")
 
   if (usuarioLogueado != null) {
-    location.href = ""
+    location  ref = ""
 }
 
 window.localStorage.clear();

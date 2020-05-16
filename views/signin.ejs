@@ -2,18 +2,23 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>login</title>
+    <title>signin</title>
     <link rel="stylesheet" href="/css/login.css">
     <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
     <link rel="stylesheet" href="/css/headerfooter.css">
   </head>
   <body>
-    <h1> Inicia sesión</h1>
-    <form class="logIn" action="/movies" method="post">
+    <h1>Crea tu usuario</h1>
+    <form class="logIn" name="signin" action="/movies" method="post">
+      <p><input class="usuario" type="text" name="nombre" value="" placeholder="Ingrese su nombre"></p>
       <p><input class="mail" type="email" name="email" value="" placeholder="Ingrese su email"></p>
+      <p><label for="">Fecha de Nacimiento</label></p>
+      <p><input class="birth" type="date" name="birth" value="" placeholder="Ingrese su fecha de nacimiento"></p>
       <p><input type="text" name="password" placeholder="Ingrese su contraseña"></p>
-      <p><button type="submit" class="iniciarSesion">iniciar sesion</button></p>
+
+      <p><button type="submit" class="iniciarSesion" >iniciar sesion</button></p>
+      <a href="/signin/login" class='yatengo'>Ya tengo una cuenta</a>
     </form>
 
     <%- include('./partials/footer')%>

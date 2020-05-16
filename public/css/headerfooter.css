@@ -126,7 +126,7 @@ footer{
   overflow:hidden;
   height: 15vh;
   background-color: #393e46;
-  margin-top: 20px;
+  margin-top: 350px;
   z-index: 10;
   position: relative;
   bottom: 0;
@@ -202,4 +202,19 @@ a.iconmenu{
      margin: 0;
 
       }
+
 }
+
+.yatengo{
+
+   text-decoration: none;
+   color: red;     
+}
+
+
+.yatengo:hover{
+
+  text-decoration: none;
+  color: black;   
+}
+

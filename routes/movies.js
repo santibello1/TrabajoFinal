@@ -18,9 +18,6 @@ router.get('/', function(req, res) {
     res.render('generos');
   });
 
-  router.get('/login', function(req, res) {
-    res.render('login');
-  });
 
   router.get('/peliculasPorGen', function(req, res) {
     res.render('peliculasPorGen');
@@ -30,7 +27,8 @@ router.get('/', function(req, res) {
     res.render('pelisPrefes');
   });
 
-router.post('/store-user', controller.storeUser);
+
+router.post('/', controller.storeUser);
 
 
 
