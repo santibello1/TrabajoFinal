@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const controller = require('../controllers/moviesController');
+const controller = require('../controllers/signinController');
 
 router.get('/', function(req, res) {
     res.render('signin');
