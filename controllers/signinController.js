@@ -5,12 +5,14 @@ storeUser: (req, res)=>{
    DB.Usuarios
     .create(req.body)
     .then(userCreado =>{
-       return res.render('/')
+       return res.render('/movies');
     })
     .catch(function(error){
        return res.send(error)
    })
 }
+
+
 
 //TOMAR UN EMAIL Y RETORNAR SI ESTE ESTA O NO EN LA BASE DE DATOS
 
