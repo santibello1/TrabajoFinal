@@ -7,9 +7,9 @@ router.get('/', function(req, res) {
   });
 
 
-  router.post('/storeUser', controller.storeUser);
+router.post('/storeUser', controller.storeUser);
 
-  router.get('/login', function(req, res) {
+router.get('/login', function(req, res) {
     res.render('login');
   });
 

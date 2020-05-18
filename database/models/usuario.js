@@ -4,9 +4,9 @@ module.exports = function (sequelize, DataTypes) {
 		'Usuarios',
 		// Columnas de tabla
 		{
-			nombre_de_usuario: DataTypes.VARCHAR,
-			email: DataTypes.VARCHAR,
-			password: DataTypes.VARCHAR,
+			nombre_de_usuario: DataTypes.STRING,
+			email: DataTypes.STRING,
+			password: DataTypes.STRING,
 			fecha_de_nacimiento: DataTypes.DATE
 		},
 		// Configuraciones adicionales
