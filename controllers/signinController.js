@@ -4,13 +4,14 @@ const controller={
 storeUser: (req, res)=>{
    DB.Usuarios
     .create(req.body)
-    .then(userCreado =>{
-       return res.render('/movies');
-    })
+    .then(
+          userCreado =>{
+            return res.render('home');    
+          })
     .catch(function(error){
        return res.send(error)
    })
-}
+},
 
 
 
