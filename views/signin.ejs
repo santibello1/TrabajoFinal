@@ -10,11 +10,11 @@
   </head>
   <body>
     <h1>Crea tu usuario</h1>
-    <form class="logIn" name="signin" action="/movies" method="post">
-      <p><input class="usuario" type="text" name="nombre" value="" placeholder="Ingrese su nombre"></p>
+    <form class="logIn" name="signin" action="/movies/storeUser" method="post">
+      <p><input class="usuario" type="text" name="nombre_de_usuario" value="" placeholder="Ingrese su nombre"></p>
       <p><input class="mail" type="email" name="email" value="" placeholder="Ingrese su email"></p>
       <p><label for="">Fecha de Nacimiento</label></p>
-      <p><input class="birth" type="date" name="birth" value="" placeholder="Ingrese su fecha de nacimiento"></p>
+      <p><input class="birth" type="date" name="fecha_de_nacimiento" value="" placeholder="Ingrese su fecha de nacimiento"></p>
       <p><input type="text" name="password" placeholder="Ingrese su contraseña"></p>
 
       <p><button type="submit" class="iniciarSesion" >iniciar sesion</button></p>
