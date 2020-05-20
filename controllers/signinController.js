@@ -14,12 +14,12 @@ storeUser: (req, res)=>{
    .then(
        function(userCreado){
       
-      if(userCreado.length == 0 ){  //no se si va email o userCreado
+      if(userCreado.length == 0 ){  
          DB.Usuarios.create(req.body)
          return res.render('home');    
               }
         else{
-         return res.render('login');
+         return res.render('signin');
         }
       },
       )
