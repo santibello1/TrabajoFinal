@@ -1,16 +1,34 @@
 const DB = require('../database/models');
+const OP = DB.Sequelize.Op;
 
 const controller={
 storeUser: (req, res)=>{
+
    DB.Usuarios
-    .create(req.body)
-    .then(
-          userCreado =>{
-            return res.render('home');    
-          })
+   .findAll({
+      where: {
+         email:{ [OP.like]: req.body.email}
+      },
+   }  )
+   
+   .then(
+       function(userCreado){
+      
+      if(userCreado.length == 0 ){  //no se si va email o userCreado
+         DB.Usuarios.create(req.body)
+         return res.render('home');    
+              }
+        else{
+         return res.render('login');
+        }
+      },
+      )
+
     .catch(function(error){
-       return res.send(error)
-   })
+         return res.send(error)
+     })
+   
+  
 },
 
 
