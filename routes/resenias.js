@@ -1,11 +1,9 @@
-// var express = require('express');
-// var router = express.Router();
-// const controller = require('../controllers/reseniasController');
+var express = require('express');
+var router = express.Router();
+const controller = require('../controllers/reseniasController');
 
-// router.get('/', function(req, res) {
-//     res.render('resenias');
-//   });
+router.get('/crearResenia', function(req, res) {
+    res.render('crearResenia');
+  });
 
-
-
-// module.exports = router;
+module.exports = router;
