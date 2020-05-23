@@ -57,6 +57,37 @@ button.recomendaciones:hover{
   background-color: #f2f2f2;
   color: #ff4949;
 }
+
+.reseniastitle {
+  margin-top: 50px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 750px;
+
+}
+
+.reseniasCont {
+  display: flex;
+  position: relative;
+  margin-top: 50px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid black 1px;
+
+
+}
+
+.reseniasSection{
+
+  flex-wrap: wrap;
+  padding: 10px;
+  margin-left: 20px;
+ 
+}
+
 a p.movieTitle{
   text-decoration: none;
   font-family: 'ABeeZee';
@@ -171,4 +202,26 @@ li.mySlides1 {
   max-width: 1000px;
   position: relative;
   margin: auto;
+}
+
+.crearNuevar{
+
+font-family: 'ABeeZee';
+border: none;
+width: 200px;
+height: 50px;
+border-radius: 20px;
+margin-left: 280px;
+margin-top: 100px;
+
+}
+
+.crearNueva{
+  text-decoration: none;
+  color: black;
+}
+
+.crearNueva:hover{
+  text-decoration: none;
+  color: red;
 }

@@ -94,6 +94,7 @@ fetch(url)
   })
 
 
+
   var QueryString = new URLSearchParams(location.search)
   var id= QueryString.get("id")
 
@@ -221,6 +222,7 @@ document.querySelector("img.corazonLleno").onclick = function() {
   document.querySelector("img.corazonVacio").style.display = "block";
   document.querySelector("img.corazonLleno").style.display="none";
 }
+
 
 
 })

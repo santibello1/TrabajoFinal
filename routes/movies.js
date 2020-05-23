@@ -27,6 +27,11 @@ router.get('/', function(req, res) {
     res.render('pelisPrefes');
   });
 
+  
+  router.get('/crearResenia', function(req, res) {
+    res.render('crearResenia');
+  });
+
 
   router.post('/', controller.storeUser);
 
