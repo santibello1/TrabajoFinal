@@ -21,6 +21,7 @@ h1{
   padding-top: 30px;
   font-size: 40px;
   margin-left:0;
+  margin-top: 50px;
 }
 
 ul.genbro{
@@ -139,4 +140,18 @@ li.mySlides1 {
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
+}
+
+.buscador2{
+  border-style: solid;
+  border-width: medium;
+  border-color: #ff4949;
+  border-radius: 20px;
+  height: 30px;
+  width: 500px;
+  text-align: center;
+}
+
+.buscarform{
+  margin-left: 550px;
 }
