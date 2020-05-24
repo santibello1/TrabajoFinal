@@ -5,8 +5,7 @@ const OP = DB.Sequelize.Op;
 let ubuscacor={
 
     vista: function(req,res){ res.render('ubuscador');},
-<<<<<<< HEAD
-=======
+
 
     busqueda: function(req,res){
         DB.Usuarios
@@ -36,8 +35,8 @@ let ubuscacor={
               return res.send(error)
           })
 
-    }
->>>>>>> master
+    },
+
 
     resultados: function (req,res){
         res.send('HOLIS ACA ESTA LA PELI')

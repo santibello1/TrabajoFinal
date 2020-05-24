@@ -156,7 +156,7 @@ li.mySlides1 {
   margin-left: 550px;
 }
 
-p button.iniciarSesion{
+ p button{
   background-color: #ff4949;
   color:#f2f2f2;
   font-family: 'ABeeZee';
@@ -165,7 +165,10 @@ p button.iniciarSesion{
   height: 40px;
   border-radius: 20px;
 }
-p button.iniciarSesion:hover {
+ p button :hover {
   background-color: #f2f2f2;
   color: #ff4949;
+}
+p input.buscador2{
+  
 }
