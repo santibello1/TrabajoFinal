@@ -35,4 +35,6 @@ router.get('/', function(req, res) {
 
   router.post('/', controller.storeUser);
 
+
+
 module.exports = router;
