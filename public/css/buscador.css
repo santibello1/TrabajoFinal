@@ -155,3 +155,17 @@ li.mySlides1 {
 .buscarform{
   margin-left: 550px;
 }
+
+p button.iniciarSesion{
+  background-color: #ff4949;
+  color:#f2f2f2;
+  font-family: 'ABeeZee';
+  border: none;
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+}
+p button.iniciarSesion:hover {
+  background-color: #f2f2f2;
+  color: #ff4949;
+}

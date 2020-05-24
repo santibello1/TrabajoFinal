@@ -4,5 +4,7 @@ const controller= require ('../controllers/ubuscadorController');
 
 router.get('/', controller.vista);
 
+router.post('/buscadorresultados', controller.resultados);
+
 
 module.exports = router; 
