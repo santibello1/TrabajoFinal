@@ -10,8 +10,13 @@
   </head>
 <body>
   <%- include('./partials/header')%>
+<br>
+<br>
+ <h1>Ingrese el Usuario que desea buscar</h1>
+ <form action="/buscadorresultados" method="GET" class="buscador">
+    <input type="text" name="buscar" class="buscar" placeholder="Buscar">
+ </form>
 
- <h1>HOLA BUSCA TU USUARIO ACA</h1>
   
 
      <%- include('./partials/footer')%>
