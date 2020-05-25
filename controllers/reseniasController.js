@@ -31,7 +31,7 @@ const controller = {
          DB.Resenias
             .create(req.body)
             .then(reseniaGuardada => {
-                return res.redirect('/detallePelis')
+                return res.redirect('detallePelis')
             })
             .catch(error => {
                 res.send(error);
