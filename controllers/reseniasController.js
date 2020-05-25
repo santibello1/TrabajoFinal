@@ -26,7 +26,8 @@ const controller = {
                 res.send(error);
             })
      },
-     // guardar la resenia en la db
+     // guardar la resenia en la db. 
+     // COMO HAGO PARA HACER CON LA INFO DE LA DB DE USUARIOS CREAR ALGO EN OTRA DB
      store: (req, res) => {
          DB.Resenias
             .create(req.body)
