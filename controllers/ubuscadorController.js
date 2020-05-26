@@ -11,16 +11,20 @@ let ubuscacor={
         DB.Usuarios
         .findAll({
            where: {
-              email:{ [OP.like]: '%' + req.params.email + '%'}
+              email:{ [OP.like]: '%' + req.query.email + '%'}
            },
+           OR:{
+               nombre_de_usuario: { [OP.like]: '%' + req.query.email + '%'}
+            }
         }  )
         
         .then(
+            
             function(userbuscado){
-           
+               
            if(userbuscado.length == 0 ){  
               res.render('buscadorresultados', {
-                userbuscado: 'No se encontraron usuarios para ese email'
+                userbuscado: ['No se encontraron usuarios para estos datos']
             });   
                    }
              else{
@@ -38,10 +42,32 @@ let ubuscacor={
     },
 
 
-    resultados: function (req,res){
-        res.send('HOLIS ACA ESTA LA PELI')
-    }
+    detalles: function(req,res){
+
+        DB.Usuarios
+        .findAll({
+           where: {
+              email:{ [OP.like]: '%' + req.params.usuario + '%'}
+           },
+        
+        }  )
+        
+        .then(
+            
+            function(userbuscado){
+               
+         res.render('userdetalles',{user:userbuscado})
+           },
+           )
+     
+         .catch(function(error){
+              return res.send(error)
+          })
+
+    },
 }
 
 
 module.exports= ubuscacor;
+
+

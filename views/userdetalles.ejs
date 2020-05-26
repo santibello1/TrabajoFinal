@@ -12,26 +12,17 @@
   <%- include('./partials/header')%>
 <br>
 <br>
- <h1 class="">Usuarios encontrados</h1>
+<% for (let i = 0; i < user.length; i++) { %>
+ <h1 class="">Detalles del usuario <%= user[i].nombre_de_usuario %></h1>
  <br>
  <br>
- <% for (let i = 0; i < userbuscado.length; i++) { %>
 
 
-  
-  <% if (userbuscado[i] == 'No se encontraron usuarios para estos datos'  ) { %>
-    <p style="text-align: center;"><%= userbuscado[i] %></p>
-    <% } else { %>
-    
   <ul >
-    <li style="text-align: center;"> <a href="/ubuscador/usuariodetalles/<%= userbuscado[i].email %>"><%= userbuscado[i].email %></a> </li>
-    
+    <li style="text-align: center;"> Nombre de usuario: <%= user[i].nombre_de_usuario %> </li>
+    <li style="text-align: center;"> Email: <%= user[i].email %> </li>
+    <li style="text-align: center;"> Fecha de nacimiento:<%= user[i].fecha_de_nacimiento %> </li>
   </ul>
-      <% } %>
-
-
-
-
 
   <% } %>
 
