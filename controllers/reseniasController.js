@@ -70,7 +70,7 @@ const controller = {
         })
         .create(req.body)
         .then(function(info){
-            return res.render('detallePelis')
+            return res.render('/movies/detallePelis')
         },
 
         )
