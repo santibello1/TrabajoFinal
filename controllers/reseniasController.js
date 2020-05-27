@@ -1,5 +1,6 @@
 const DB = require('../database/models');
 const OP = DB.Sequelize.Op;
+const moduloLogin = require('moduloLogin'); //REQUERIR EL MODULO DE LOG IN PARA USARLO CUADNO LO NECESITE
 
 const controller = {
     // muestra todas las resenias
@@ -28,14 +29,35 @@ const controller = {
      },
      // guardar la resenia en la db. 
     store: function (req,res){
-        DB.Resenias
-        .findOne({
-            where: {
+        moduloLogin.chequearUsuario(email)
+        .then(
+            function(resultado){
 
+
+                res.send(resultado)
             }
-        })
+
+        )
+        moduloLogin.buscarPorEmail(email)
+        .then(
+            function(resultado){
+
+                res.send(resultado)
+            }
+        )
+        moduloLogin.validar(email, password)
+        .then(
+            function(resultado){
+
+                res.send(resultado)
+            }
+        )
+        DB.Resenias
         .create(req.body)
+      
         .then(function(info){
+        
+
             return res.render('/movies/detallePelis')
         },
 

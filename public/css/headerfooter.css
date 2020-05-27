@@ -38,10 +38,7 @@ a.icon{
   /* padding-top: 7%; */
   /* float: left; */
  }
- a.pelisPrefes{
-   /* margin-right: 15px;
-   padding-top: 7%; */
- }
+
  p.nameUsuario{
   display: none;
   color: #ff4949;
@@ -200,10 +197,7 @@ a.iconmenu{
     }
 
     /* Style the active link (or home/logo) */
-    .active {
-      /* background-color: #4CAF50; */
-      /* color: white; */
-    }
+  
     p.nameUsuarioMobile{
      display: none;
      color: #ff4949;

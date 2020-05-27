@@ -58,13 +58,8 @@ button.recomendaciones:hover{
   color: #ff4949;
 }
 
-.reseniastitle {
-  margin-top: 50px;
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-left: 750px;
 
-}
+
 
 .reseniasCont {
   display: flex;
@@ -206,22 +201,34 @@ li.mySlides1 {
 
 .crearNuevar{
 
-font-family: 'ABeeZee';
-border: none;
-width: 200px;
-height: 50px;
-border-radius: 20px;
-margin-left: 280px;
-margin-top: 100px;
-
+  background-color: #ff4949;
+  color:#f2f2f2;
+  font-family: 'ABeeZee';
+  border: none;
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  margin-left: 80px;
+  padding-top: 15px;
+  padding-left: 25px;
+  margin-top: 30px;
 }
 
-.crearNueva{
-  text-decoration: none;
-  color: black;
-}
+
 
 .crearNueva:hover{
-  text-decoration: none;
-  color: red;
+  background-color: #f2f2f2;
+  color: #ff4949;  
+}
+
+h2.reseniastitle{
+  font-family: 'ABeeZee';
+  color: #ff4949;
+  text-align: center; 
+  font-size: 30px;
+}
+
+a.crearNueva{
+  text-decoration:none;
+  color:#f2f2f2;
 }
