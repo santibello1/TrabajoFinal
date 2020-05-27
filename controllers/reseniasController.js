@@ -20,7 +20,7 @@ const controller = {
          DB.Resenias
              .findAll()
              .then(resenias => {
-                 return res.render('crearResenia',
+                 return res.render('crearResenia'
                  );
              })
              .catch(error => {
@@ -32,11 +32,8 @@ const controller = {
         moduloLogin.chequearUsuario(email)
         .then(
             function(resultado){
-
-
                 res.send(resultado)
             }
-
         )
         moduloLogin.buscarPorEmail(email)
         .then(
@@ -58,7 +55,7 @@ const controller = {
         .then(function(info){
         
 
-            return res.render('/movies/detallePelis')
+            return res.redirect('/movies/detallePelis')
         },
 
         )
