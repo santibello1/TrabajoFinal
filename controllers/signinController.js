@@ -23,6 +23,9 @@ storeUser: (req, res)=>{
         }
       },
       )
+   .then(userCreado => {
+      return res.redirect('/movies');
+   })
 
     .catch(function(error){
          return res.send(error)
