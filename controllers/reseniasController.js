@@ -1,6 +1,6 @@
 const DB = require('../database/models');
 const OP = DB.Sequelize.Op;
-const moduloLogin = require('moduloLogin'); //REQUERIR EL MODULO DE LOG IN PARA USARLO CUADNO LO NECESITE
+const moduloLogin = require('./moduloLogin'); //REQUERIR EL MODULO DE LOG IN PARA USARLO CUADNO LO NECESITE
 
 const controller = {
     // muestra todas las resenias
@@ -28,7 +28,7 @@ const controller = {
      },
      // guardar la resenia en la db. 
     store: function (req,res){
-        moduloLogin.chequearUsuario(req.body.email)
+        moduloLogin.chequearUsuario(req.body)
         .then(
             function(resultado){
                 // if (resultado == false){

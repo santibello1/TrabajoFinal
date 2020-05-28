@@ -5,7 +5,7 @@ const controller = require('../controllers/reseniasController');
 router.get('/crearResenia', function(req, res) {
     res.render('crearResenia');
   });
-router.post('/', controller.store);
+router.post('/detallePelis', controller.store);
 
 
 module.exports = router;
