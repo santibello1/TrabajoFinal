@@ -20,8 +20,7 @@ const controller = {
          DB.Resenias
              .findAll()
              .then(resenias => {
-                 return res.render('crearResenia'
-                 );
+                 return res.render('crearResenia');
              })
              .catch(error => {
                 res.send(error);
@@ -29,10 +28,19 @@ const controller = {
      },
      // guardar la resenia en la db. 
     store: function (req,res){
-        moduloLogin.chequearUsuario(email)
+        moduloLogin.chequearUsuario(req.body.email)
         .then(
             function(resultado){
-                //...
+                // if (resultado == false){
+                //     console.log('el email no esta en la base de datos');
+                // }
+                // else{
+                //     console.log('el email esta en la base de datos');
+                //     moduloLogin.buscarPorEmail(req.body.email)
+                //     .then(usuario => {
+                //         console.log(req.body.password);
+                //     })    
+                // }
                 res.send(resultado)
             }
         )
