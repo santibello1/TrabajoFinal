@@ -1,7 +1,6 @@
 const DB = require('../database/models');
 const OP = DB.Sequelize.Op;
-// const bcryptjs = require('bcryptjs');
-// const passEncriptada = bcryptjs.hashSync(req.body.password, 10);
+const bcryptjs = require('bcryptjs');
 
 const controller={
 storeUser: (req, res)=>{
@@ -15,18 +14,22 @@ storeUser: (req, res)=>{
    
    .then(
        function(userCreado){
+        
+         let passEncriptada = bcrypt.hashSync(req.body.password, 10);
       
-      if(userCreado.length == 0 ){  
-         DB.Usuarios.create(req.body)
-         //    ({password: passEncriptada
-         // })
-         return res.render('home');    
-              }
-        else{
-         return res.render('signin');
-        }
-      },
-      )
+         if(userCreado.length == 0 ){  
+         DB.Usuarios.create((req,res), {
+            nombre_de_usuario: req.body.usuario,
+            email: req.body.email,
+            password: passEncriptada,
+            fecha_de_nacimiento: req.body.birth,
+         } )
+      
+            return res.render('home');    
+         } else{
+            return res.render('signin');
+            }
+      },)
    .then(userCreado => {
       return res.redirect('/movies');
    })
