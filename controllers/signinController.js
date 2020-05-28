@@ -1,5 +1,7 @@
 const DB = require('../database/models');
 const OP = DB.Sequelize.Op;
+// const bcryptjs = require('bcryptjs');
+// const passEncriptada = bcryptjs.hashSync(req.body.password, 10);
 
 const controller={
 storeUser: (req, res)=>{
@@ -16,6 +18,8 @@ storeUser: (req, res)=>{
       
       if(userCreado.length == 0 ){  
          DB.Usuarios.create(req.body)
+         //    ({password: passEncriptada
+         // })
          return res.render('home');    
               }
         else{

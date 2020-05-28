@@ -32,6 +32,7 @@ const controller = {
         moduloLogin.chequearUsuario(email)
         .then(
             function(resultado){
+                //...
                 res.send(resultado)
             }
         )
