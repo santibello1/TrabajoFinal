@@ -1,6 +1,7 @@
 const DB = require('../database/models');
 const OP = DB.Sequelize.Op;
 const moduloLogin = require('./moduloLogin'); //REQUERIR EL MODULO DE LOG IN PARA USARLO CUADNO LO NECESITE
+const bcrypt = require('bcryptjs');
 
 const controller = {
     // muestra todas las resenias
@@ -17,60 +18,42 @@ const controller = {
 
      //muestra el formulario para crear resenias
     create: (req, res) => {
-         DB.Resenias
-             .findAll()
-             .then(resenias => {
-                 return res.render('crearResenia');
-             })
-             .catch(error => {
-                res.send(error);
-            })
+        return res.render('crearResenia', {
+            idMovie: req.query.id,
+        });
      },
      // guardar la resenia en la db. 
     store: function (req,res){
-        moduloLogin.chequearUsuario(req.body)
-        .then(
-            function(resultado){
-                // if (resultado == false){
-                //     console.log('el email no esta en la base de datos');
-                // }
-                // else{
-                //     console.log('el email esta en la base de datos');
-                //     moduloLogin.buscarPorEmail(req.body.email)
-                //     .then(usuario => {
-                //         console.log(req.body.password);
-                //     })    
-                // }
-                res.send(resultado)
+        // return res.send(req.body);
+        moduloLogin.chequearUsuario(req.body.email)
+        .then(function(existeUsuario){
+            if (existeUsuario){
+                moduloLogin.buscarPorEmail(req.body.email)
+                .then(usuario => {
+                    let validaPass = bcrypt.compareSync(req.body.password, usuario.password);
+                    if (validaPass) {
+                        DB.Resenias
+                            .create({
+                                id_pelicula: req.body.id_pelicula,
+                                id_usuario: usuario.id,
+                                texto_resenia: req.body.texto_resenia,
+                                puntaje_pelicula: req.body.puntaje_pelicula
+                            })
+                            .then(reseniaCreada => {
+                                return res.redirect('/movies/detallePelis?id=' + req.body.id_pelicula);
+                            })
+                    } else {
+                        return res.send('La password está errdad')
+                    }
+                })
+            } else {
+                return res.send('El usuairo no existe')
             }
-        )
-        moduloLogin.buscarPorEmail(email)
-        .then(
-            function(resultado){
-
-                res.send(resultado)
-            }
-        )
-        moduloLogin.validar(email, password)
-        .then(
-            function(resultado){
-
-                res.send(resultado)
-            }
-        )
-        DB.Resenias
-        .create(req.body)
-      
-        .then(function(info){
-        
-
-            return res.redirect('/movies/detallePelis')
-        },
-
-        )
+                
+        })
         .catch(function(error){
             return res.send(error)
-           })
+        })
     }
 };
 

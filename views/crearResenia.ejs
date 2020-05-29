@@ -9,21 +9,22 @@
     <link rel="stylesheet" href="/css/headerfooter.css">
   </head>
   <body>
-    <h1>Crear Reseña</h1>
-    <form class="logIn" name="crearResenia" action="/resenias/detallePelis" method="post">
+    <h1>Crear Reseña  </h1>
+    <form class="logIn" name="crearResenia" action="/resenias/guardar" method="post">
 
       <p><input class="mail" type="email" name="email" value="" placeholder="Ingrese su email"></p>
       <p><input type="password" name="password" placeholder="Ingrese su contraseña"></p>
       <p> <textarea name="texto_resenia" id="" cols="60" rows="10" placeholder="Ingrese su reseña aquí"></textarea></p>
       <p><label for="puntaje_pelicula">Estrellas:</label></p>
-      <p>  <select name="estrellas">
-          <option value="opc">1</option>
-          <option value="opc">2</option>
-          <option value="opc">3</option>
-          <option value="opc">4</option>
-          <option value="opc">5</option>
+      <p>  <select name="puntaje_pelicula">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
         </select>
       </p>
+      <p><input type="hidden" name="id_pelicula" value="<%= idMovie %>"></p>
       
       
 

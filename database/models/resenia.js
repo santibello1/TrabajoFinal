@@ -7,6 +7,7 @@ module.exports = function (sequelize, DataTypes) {
 			id_pelicula: DataTypes.INTEGER,
 			id_usuario: DataTypes.INTEGER,
 			texto_resenia: DataTypes.STRING,
+			puntaje_pelicula: DataTypes.DECIMAL,
             fecha_creacion: DataTypes.DATE,
             fecha_actualizacion: DataTypes.DATE
 		},

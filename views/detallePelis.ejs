@@ -47,7 +47,7 @@
       </div>
 
       <section class="crearNuevar">
-        <a href="/movies/crearResenia" class="crearNueva">Crear nueva reseña</a>
+        <a href="/resenias/crearResenia" class="crearNueva">Crear nueva reseña</a>
       </section>
 
      
@@ -58,7 +58,12 @@
       
        <%- include('./partials/footer')%>
 
-
+      <script>
+        let queryString = new URLSearchParams(location.search);
+        console.log(queryString.get('id'));
+        let enlaceCrear = document.querySelector('.crearNueva');
+        enlaceCrear.href += ('?id=' + queryString.get('id'))
+      </script>
 
   </body>
 </html>

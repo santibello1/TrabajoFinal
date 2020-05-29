@@ -15,12 +15,12 @@ module.exports = function (sequelize, DataTypes) {
 		}
 	);
 
-	user.associate = function(models){
+	/*user.associate = function(models){
 		user.hasMany(models.Resenias, {
 			as: 'resenias',
-			foreignkey: 'id_usuario' /*chequear esto*/
+			foreignkey: 'id_usuario' // chequear esto
 		});
-	}
+	}*/
 
 	return user;
 }

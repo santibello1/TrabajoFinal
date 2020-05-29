@@ -27,7 +27,7 @@ let moduloLogin = {
         return db.Usuarios.findOne({
             where:{
                 email:email,
-                password: password
+                // password: password
             },
         })
         .then(results=>{
