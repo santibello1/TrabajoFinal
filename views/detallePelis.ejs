@@ -40,8 +40,8 @@
       
         <ul class="reseniasSection">
 
-          <li> Aca van las reseñas </li> <br> 
-
+          <li>aca van las reseñas</li>
+          
         </ul>
     
       </div>
@@ -62,7 +62,9 @@
         let queryString = new URLSearchParams(location.search);
         console.log(queryString.get('id'));
         let enlaceCrear = document.querySelector('.crearNueva');
-        enlaceCrear.href += ('?id=' + queryString.get('id'))
+        enlaceCrear.href += ('?id=' + queryString.get('id'));
+        let enlaceResenias = document.querySelector('.reseniasCont');
+        enlaceResenias.href += ('?id=' + queryString.get('id'))
       </script>
 
   </body>
