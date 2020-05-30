@@ -7,12 +7,12 @@ const controller = {
     // muestra todas las resenias
     resenia: (req, res) => {
         DB.Resenias
-            .findByPk(req.params.id, {
-                include: [{association: 'usuario'}, {association: ' resenias'}]
-            })
+            // .findByPk(req.params.id, {
+            //     include: [{association: 'usuario'}, {association: ' resenias'}]
+            // })
             .then ((resenia) => {
-             res.render('detallePelis', {resenia:resenia})  
-             })
+             res.render('detallePelis') //, {resenia:resenia})  
+            })
             .catch(error => {
                 res.send(error);
             });

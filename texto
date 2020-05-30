@@ -1,0 +1,10 @@
+esto es lo que deberia ir en detalle pelis para que muestre las resenias
+ <% for (let i = 0; i< resenia.legth; i++) { %>
+            <li>
+              <a class="listadoResenias" href="/resenias/verResenias">
+                <%=resenia[i].texto_resenia>
+              </a>
+            </li>
+          <% } %>
+ let enlaceMostrar = document.querySelector('.listadoResenias');
+        enlaceMostrar.href += ('?id=' + queryString.get('id'));

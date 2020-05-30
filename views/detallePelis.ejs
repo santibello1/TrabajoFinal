@@ -38,17 +38,11 @@
      
       <div class="reseniasCont">
       
-        <ul class="reseniasSection" action="/resenias/verResenias">
+        <ul class="reseniasSection" >
 
           <li>aca van las reseñas</li>
 
-          <% for (let i = 0; i< resenia.legth; i++) { %>
-            <li>
-              <a class="listadoResenias" href="/resenias/verResenias">
-                <%=resenia[i].texto_resenia>
-              </a>
-            </li>
-          <% } %>
+         
           
         </ul>
 
@@ -72,9 +66,6 @@
         console.log(queryString.get('id'));
         let enlaceCrear = document.querySelector('.crearNueva');
         enlaceCrear.href += ('?id=' + queryString.get('id'));
-        let enlaceMostrar = document.querySelector('.listadoResenias');
-        enlaceMostrar.href += ('?id=' + queryString.get('id'));
-
       </script>
 
   </body>
