@@ -4,6 +4,11 @@ module.exports = function (sequelize, DataTypes) {
 		'Resenias',
 		// Columnas de tabla
 		{
+			id:{
+				primaryKey: true,
+				autoIncrement: true,
+				type: DataTypes.INTEGER
+			},
 			id_pelicula: DataTypes.INTEGER,
 			id_usuario: DataTypes.INTEGER,
 			texto_resenia: DataTypes.STRING,
@@ -13,6 +18,7 @@ module.exports = function (sequelize, DataTypes) {
 		},
 		// Configuraciones adicionales
 		{
+			tableName: 'resenias',
 			timestamps: false
 		}
 	);

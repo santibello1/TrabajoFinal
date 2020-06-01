@@ -35,8 +35,5 @@ router.get('/', function(req, res) {
 
   router.post('/', controller.storeUser);
 
-  router.get('/misreseñas', function(req, res) {
-    res.render('misreseñas');
-  });
 
 module.exports = router;

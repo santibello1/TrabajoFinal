@@ -10,7 +10,15 @@
   </head>
   <body>
     <%- include('./partials/header')%>
-    <h1> Mis Reseñas</h1>
+    <h1 style="margin-top: 100px;"> Confirme su usuario</h1>
+    <form class="logIn" name="" action="/misresenias" method="post">
+
+      <p><input class="mail" type="email" name="email" value="" placeholder="Ingrese su email"></p>
+      <p><input type="password" name="password" placeholder="Ingrese su contraseña"></p>
+
+      <p><button type="submit" class="iniciarSesion" >Confirmar</button></p>
+
+    </form>
   
 
     <%- include('./partials/footer')%>

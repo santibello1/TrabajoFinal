@@ -9,7 +9,9 @@ var usersRouter = require('./routes/users');
 var moviesRouter = require('./routes/movies');
 var signinRouter = require('./routes/signin');
 var ubuscadorRouter = require('./routes/ubuscador');
-var reseniaRouter = require('./routes/resenias')
+var reseniaRouter = require('./routes/resenias');
+var misreseniasRouter = require('./routes/misresenias')
+
 
 var app = express();
 
@@ -29,6 +31,7 @@ app.use('/movies', moviesRouter);
 app.use('/signin', signinRouter);
 app.use('/ubuscador', ubuscadorRouter);
 app.use('/resenias', reseniaRouter);
+app.use('/misresenias', misreseniasRouter);
 
 
 

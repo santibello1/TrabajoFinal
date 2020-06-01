@@ -4,6 +4,11 @@ module.exports = function (sequelize, DataTypes) {
 		'Usuarios',
 		// Columnas de tabla
 		{
+			id:{
+				primaryKey: true,
+				autoIncrement: true,
+				type: DataTypes.INTEGER
+			},
 			nombre_de_usuario: DataTypes.STRING,
 			email: DataTypes.STRING,
 			password: DataTypes.STRING,
@@ -11,6 +16,7 @@ module.exports = function (sequelize, DataTypes) {
 		},
 		// Configuraciones adicionales
 		{
+			tableName: 'usuarios',
 			timestamps: false
 		}
 	);
