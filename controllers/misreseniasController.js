@@ -46,7 +46,7 @@ const controller = {
 
             console.log(resultado)
 
-            if (resultado == undefined) {
+            if (resultado.length == 0) {
                 res.render('misresenias', {resultado: 'todavia no hiciste reseñas'})
             }
             else {
