@@ -22,7 +22,7 @@ const controller = {
                     }
                 })
             } else {
-                return res.render('noExisteUsuario')
+                return res.send ('noExisteUsuario')
                 //hay que crear una vista para esto o mandarlo a signin
         
             }
@@ -50,19 +50,63 @@ const controller = {
                 res.render('misresenias', {resultado: 'todavia no hiciste reseñas'})
             }
             else {
-
                 res.render('misresenias', {resultado: resultado})
-
             }
-
-            
-
-        })
-        
+        })     
     },
 
+    showEdit: function (req, res) {
+        DB.Resenias.findOne({
+            where: [
+                {id: req.params.id}
+            ]
+        })
+        .then(resultado => {
+            res.render('editReview', { resultado });
+        })
+    },
 
+    confirmEdit: function (req, res) {
+        moduloLogin.validar(req.body.email, req.body.password)
+        .then (resultado => {
+            if( resultado != undefined ) {
+                DB.Resenias.update({
+                    texto_resenia: req.body.texto_resenia,
+                    puntaje_pelicula: req.body.puntaje_pelicula,
+                }, {
+                    where: {
+                        id: req.params.id,
+                    }
+                })
+                .then(() => {
+                    res.redirect('/misresenias/' + resultado.id)
+                })
+            } else {
+                return res.redirect('/misresenias/editar/' + req.params.id)
+            }
+            
+        })
+    },
 
+    deleteReview: function (req, res){
+        res.render('loginEliminarResenias', { eliminarId: req.params.idn});
+    },
+
+    confirmDelete: function (req, res) {
+        moduloLogin.validar(req.body.email, req.body.password)
+        .then(resultado => {
+            if(resultado){
+                DB.Resenias.destroy({
+                where: {
+                    id:req.params.id,
+                }
+            })
+            res.redirect('/misresenias/' + resultado.id);
+        } else {
+            res.redirect ('/misresenias/borrar' + req.params.id);
+        }
+        })
+    }
 
 };
 

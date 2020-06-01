@@ -11,28 +11,29 @@
     
   </head>
 <body>
+ 
   <%- include('./partials/header')%>
-<h1 style="margin-top: 100px;">Mis reseñas</h1>
-
-<% for (let i = 0; i < resultado.length; i++) { %>
-
-
   
-  <% if (resultado[i] == 'todavia no hiciste reseñas'  ) { %>
-    <p style="text-align: center;"><%= resultado[i] %></p>
+  <h1 style="margin-top: 100px;">Mis Reseñas</h1>
+ 
+  
+    <% for (let i = 0; i < resultado.length; i++) { %>
+    <% if (resultado[i] == 'todavia no hiciste reseñas'  ) { %>
+      <p style="text-align: center;"><%= resultado[i] %></p>
     <% } else { %>
+      <ul >
+        <li style="text-align: center;"> <%= resultado[i].texto_resenia %> </li>
+        <li style="text-align: center;"> puntaje: <%= resultado[i].puntaje_pelicula %> </li>
+        <a href="/resenias/detallePelis/<%= resultado[i].id_pelicula%>?id=<%= resultado[i].id_pelicula %>" >Ver pelicula</a>
+        <a href="/misresenias/editar/<%= resultado[i].id_resenia %>">Editar</a>
+        <a href="/misresenias/borrar/<%= resultado[i].id_resenia%>">Eliminar</a>
+     </ul>
+    <% } %>
+    <% } %>
+ 
+
     
-  <ul >
-
-    <li style="text-align: center;"> <%= resultado[i].texto_resenia %> </li>
-    <li style="text-align: center;"> puntaje: <%= resultado[i].puntaje_pelicula %> </li>
-    <li style="text-align: center;"><a href="/resenias/detallePelis/<%= resultado[i].id_pelicula%>?id=<%= resultado[i].id_pelicula %>" >ir a la pelicula</a></li>
-    
-  </ul>
-      <% } %>
-
-
-  <% } %>
+  
 
   <%- include('./partials/footer')%>
 
