@@ -10,7 +10,7 @@ const controller = {
         .then (existeUsuario => {
             if (existeUsuario){
                 // return res.send ('el mail existe en la db')
-                return res.redirect ('/home')
+                return res.redirect ('/movies')
             } else {
                 // return res.send ('el mail NO existe en la db')
                 return res.redirect ('/signin')
