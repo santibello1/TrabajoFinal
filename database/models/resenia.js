@@ -13,7 +13,8 @@ module.exports = function (sequelize, DataTypes) {
 		},
 		// Configuraciones adicionales
 		{
-			timestamps: false
+			timestamps: false,
+			tableName: 'resenias'
 		}
 	);
 

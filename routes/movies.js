@@ -12,7 +12,7 @@ router.get('/', function(req, res) {
 
   router.get('/detallePelis', function(req, res) {
     res.render('detallePelis');
-  });
+   });
 
   router.get('/generos', function(req, res) {
     res.render('generos');

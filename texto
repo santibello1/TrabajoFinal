@@ -8,3 +8,5 @@ esto es lo que deberia ir en detalle pelis para que muestre las resenias
           <% } %>
  let enlaceMostrar = document.querySelector('.listadoResenias');
         enlaceMostrar.href += ('?id=' + queryString.get('id'));
+
+        
