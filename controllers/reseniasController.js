@@ -61,19 +61,19 @@ const controller = {
         })
     },
 
-// tomar las reseñas co el mismo movie id para llevarlas a detalle pelis
-enPelicula:  (req, res) => {
- DB.Resenias
-    .findAll({
-     where:
-     { id_pelicula : req.params.id }
- })
-.then ( (resenias) => {
-   console.log(resenias)
-    return res.render('detallePelis', {resenias: resenias})
-})
-}
-    
+        // tomar las reseñas co el mismo movie id para llevarlas a detalle pelis
+    enPelicula:  (req, res) => {
+        DB.Resenias
+            .findAll({
+                 where: 
+                 { id_pelicula : req.params.id }
+            })
+            .then ( (resenias) => {
+                console.log(resenias)
+                return res.render('detallePelis', {resenias: resenias})
+            })
+    }
+        
 };
 
 
