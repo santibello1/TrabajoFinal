@@ -45,17 +45,19 @@
           <% if (resenias[i].length == 0) { %>
             <li> 
               'Todvia no hay reseñnas para esta película'
+            </li>
             
-            <br>
-           
           <% } else { %>
-            <%= resenias[i].usuario.nombre_de_usuario %>
+         <li>
+        Usuario:  <%= resenias[i].usuario.nombre_de_usuario %>
+        <br>
+        <%= resenias[i].texto_resenia %>
+        <br>
+        Puntaje: <%= resenias[i].puntaje_pelicula %>
+         </li>  
           <% } %>
 
-
-
-
-       }
+       <% } %>
 
 
          
