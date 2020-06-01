@@ -11,12 +11,12 @@ let ubuscacor={
         DB.Usuarios
         .findAll({
            where: {
-              email:{ [OP.like]: '%' + req.query.email + '%'}
-           },
-           OR:{
-               nombre_de_usuario: { [OP.like]: '%' + req.query.email + '%'}
+               [OP.or]: {
+                    email:{ [OP.like]: '%' + req.query.buscador2 +'%'},
+                    nombre_de_usuario: { [OP.like]: '%' + req.query.buscador2 +'%'}
+                },  
             }
-        }  )
+        })
         
         .then(
             
