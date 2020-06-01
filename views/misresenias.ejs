@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>HOME</title>
+    <title>Mis reseñas</title>
     <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
     <link rel="stylesheet" href="/css/home.css">
@@ -12,7 +12,16 @@
   </head>
 <body>
   <%- include('./partials/header')%>
-<h1>Mis reseñas</h1>
+<h1 style="margin-top: 100px;">Mis reseñas</h1>
+
+<% for (let i = 0; i < resultado.length; i++) { %>
+    
+  <ul >
+    <li style="text-align: center;"> <%= resultado[i].texto_resenia %> </li>
+    
+  </ul>
+      <% } %>
+
   <%- include('./partials/footer')%>
 
 </body>

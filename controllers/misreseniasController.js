@@ -8,14 +8,25 @@ const controller = {
 
     verifyUser: function (req, res) {
 
-        moduloLogin.validar(req.body.email, req.body.password)
-        .then(resultado => {
-            if (resultado == undefined) {
-                res.redirect('/misresenias')
+        moduloLogin.chequearUsuario(req.body.email)
+        .then(function(existeUsuario){
+            if (existeUsuario){
+                moduloLogin.buscarPorEmail(req.body.email)
+                .then(usuario => {
+                    let validaPass = bcrypt.compareSync(req.body.password, usuario.password);
+                    if (validaPass) {
+                       res.redirect('misresenias/' + usuario.id)
+                    } else {
+                        return res.redirect('/misresenias')
+                       
+                    }
+                })
             } else {
-                console.log(resultado.id);
-                res.redirect('misresenias/' + resultado.id)
+                return res.render('noExisteUsuario')
+                //hay que crear una vista para esto o mandarlo a login
+        
             }
+                
         })
         
 
@@ -36,11 +47,11 @@ const controller = {
             console.log(resultado)
 
             if (resultado == undefined) {
-                res.reder('misresenias', {resultado: 'todavia no hiciste reseñas'})
+                res.render('misresenias', {resultado: 'todavia no hiciste reseñas'})
             }
             else {
 
-                res.reder('misresenias', {resultado: resultado})
+                res.render('misresenias', {resultado: resultado})
 
             }
 
