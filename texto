@@ -13,3 +13,5 @@ para q t mande al lugar d dde venias
 backURL=req.header('Referer') || '/';
  res.redirect(backURL); 
         
+
+        tenemos que mirar el n¿buscador de usuario
