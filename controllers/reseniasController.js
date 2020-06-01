@@ -66,7 +66,10 @@ enPelicula:  (req, res) => {
  DB.Resenias
     .findAll({
      where:
-     { id_pelicula : req.params.id }
+     { id_pelicula : req.params.id },
+     include: [
+         {  association: 'usuario'  }
+     ]
  })
 .then ( (resenias) => {
    console.log(resenias)
