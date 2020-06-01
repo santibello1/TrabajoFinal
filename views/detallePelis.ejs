@@ -39,9 +39,6 @@
       <div class="reseniasCont">
 
         <ul class="reseniasSection" >
-      
-      
-      
           <% if (resenias.length == 0) { %>
             <li> 
               'Todvia no hay reseñas para esta película'
@@ -49,22 +46,18 @@
             
           <% } else { %>
             <% for (let i=0 ; i < resenias.length ; i ++){ %>
-         <li>
-        Usuario:  <%= resenias[i].usuario.nombre_de_usuario %>
-        <br>
-        <%= resenias[i].texto_resenia %>
-        <br>
-        Puntaje: <%= resenias[i].puntaje_pelicula %>
-         </li>  
+              <li>
+                  Usuario:  <%= resenias[i].usuario.nombre_de_usuario %>
+                  <br>
+                   <%= resenias[i].texto_resenia %>
+                   <br>
+                   Puntaje: <%= resenias[i].puntaje_pelicula %>
+               </li>  
+            <% } %>
+
           <% } %>
 
-       <% } %>
-
-
-         
-          
         </ul>
-
     
       </div>
 

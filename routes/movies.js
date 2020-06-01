@@ -11,7 +11,7 @@ router.get('/', function(req, res) {
   });
 
   router.get('/detallePelis', function(req, res) {
-    res.render('detallePelis');
+    res.redirect('/resenias/detallePelis/' +req.query.id);
    });
 
   router.get('/generos', function(req, res) {
