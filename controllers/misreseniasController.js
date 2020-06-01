@@ -23,7 +23,7 @@ const controller = {
                 })
             } else {
                 return res.render('noExisteUsuario')
-                //hay que crear una vista para esto o mandarlo a login
+                //hay que crear una vista para esto o mandarlo a signin
         
             }
                 

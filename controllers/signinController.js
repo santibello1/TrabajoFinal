@@ -31,14 +31,13 @@ storeUser: (req, res)=>{
             return res.send({msg: 'error de DB', error});
          })   
       } else {
-         return res.redirect('/signin/login');
+         return res.redirect('/movies');
       }
    })
    .catch(function(error){
       return res.send(error)
    })
 },
-
 
 
 //TOMAR UN EMAIL Y RETORNAR SI ESTE ESTA O NO EN LA BASE DE DATOS
@@ -66,14 +65,6 @@ emailExists: function (req, res){
           return res.send(error)
          })
 },
-
-
-
-
-
-//
-
-
 
 };
 module.exports= controller

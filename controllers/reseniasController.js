@@ -7,9 +7,7 @@ const controller = {
     // muestra todas las resenias
     resenia: (req, res) => {
         DB.Resenias
-            // .findByPk(req.params.id, {
-            //     include: [{association: 'usuario'}, {association: ' resenias'}]
-            // })
+            .findAll()
             .then ((resenia) => {
              res.render('detallePelis') //, {resenia:resenia})  
             })
@@ -23,7 +21,7 @@ const controller = {
         return res.render('crearResenia', {
             idMovie: req.query.id,
         });
-     },
+    },
      // guardar la resenia en la db. 
     store: function (req,res){
         // return res.send(req.body);
@@ -60,22 +58,21 @@ const controller = {
             return res.send(error)
         })
     },
-
-// tomar las reseñas co el mismo movie id para llevarlas a detalle pelis
-enPelicula:  (req, res) => {
- DB.Resenias
-    .findAll({
-     where:
-     { id_pelicula : req.params.id },
-     include: [
-         {  association: 'usuario'  }
-     ]
- })
-.then ( (resenias) => {
-   console.log(resenias)
-    return res.render('detallePelis', {resenias: resenias})
-})
-}
+    // tomar las reseñas co el mismo movie id para llevarlas a detalle pelis
+    enPelicula:  (req, res) => {
+        DB.Resenias
+        .findAll({
+            where:
+                { id_pelicula : req.params.id },
+            include: [
+                { association: 'usuario'  }
+            ]
+        })
+        .then ( (resenias) => {
+            console.log(resenias)
+            return res.render('detallePelis', {resenias: resenias})
+        })
+    }
     
 };
 
