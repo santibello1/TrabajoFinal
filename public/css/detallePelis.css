@@ -64,13 +64,11 @@ button.recomendaciones:hover{
 .reseniasCont {
   display: flex;
   position: relative;
-  margin-top: 50px;
-  color: black;
   font-family: Arial, Helvetica, sans-serif;
   width: 900px;
   margin-left: auto;
   margin-right: auto;
-  border: solid black 1px;
+  
 
 
 }
@@ -199,8 +197,7 @@ li.mySlides1 {
   margin: auto;
 }
 
-.crearNuevar{
-
+button.crearNuevar{
   background-color: #ff4949;
   color:#f2f2f2;
   font-family: 'ABeeZee';
@@ -209,16 +206,14 @@ li.mySlides1 {
   height: 50px;
   border-radius: 20px;
   margin-left: 80px;
-  padding-top: 15px;
-  padding-left: 25px;
-  margin-top: 30px;
 }
 
 
 
-.crearNueva:hover{
+button.crearNuevar:hover{
   background-color: #f2f2f2;
-  color: #ff4949;  
+  color: #ff4949;
+
 }
 
 h2.reseniastitle{
@@ -232,3 +227,27 @@ a.crearNueva{
   text-decoration:none;
   color:#f2f2f2;
 }
+
+a.crearNueva:hover{
+  text-decoration:none;
+  color: #ff4949;
+}
+
+
+ul.reseniasSection li{
+  font-family: 'ABeeZee';
+  border-style: solid;
+  border-color: #f2f2f2;
+  color: #ff4949;
+
+margin-top: 10px;
+padding-right: 700px;
+background-color: #f2f2f2;
+}
+
+ul.reseniasSection li p{
+  margin-top: 5px;
+  margin-left: 15px;
+  padding-right: 650px;
+}
+

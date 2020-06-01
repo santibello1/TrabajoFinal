@@ -47,8 +47,11 @@
           <% } else { %>
             <% for (let i=0 ; i < resenias.length ; i ++){ %>
               <li>
-                  Usuario:  <%= resenias[i].usuario.nombre_de_usuario %>
+                <p>
+                  <b>Usuario</b> <%= resenias[i].usuario.nombre_de_usuario %>
+                </p>   
                   <br>
+<<<<<<< Updated upstream
                   <br>
                    <%= resenias[i].texto_resenia %>
                    <br>
@@ -56,6 +59,17 @@
 
                    <br>
                    <br>
+=======
+                  <p>
+                    <%= resenias[i].texto_resenia %>
+                  </p>
+                 
+                   <br>
+                   <p>
+                   <b>Estrellas :</b> <%= resenias[i].puntaje_pelicula %> <p>/5.00</p>
+                   </p>
+                 
+>>>>>>> Stashed changes
                </li>  
             <% } %>
 
@@ -65,15 +79,10 @@
         </ul>
     
       </div>
-
-      <section class="crearNuevar">
-        <a href="/resenias/crearResenia" class="crearNueva">Crear nueva reseña</a>
-      </section>
-
-     
-
-     
-  
+<br>
+      <button type="button" class="crearNuevar">
+        <a href="/resenias/crearResenia" class="crearNueva">NUEVA RESEÑA</a>
+      </button>
 
       
        <%- include('./partials/footer')%>
