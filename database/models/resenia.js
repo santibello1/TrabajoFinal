@@ -18,13 +18,12 @@ module.exports = function (sequelize, DataTypes) {
 		},
 		// Configuraciones adicionales
 		{
-<<<<<<< HEAD
+
 			tableName: 'resenias',
 			timestamps: false
-=======
-			timestamps: false,
-			tableName: 'resenias'
->>>>>>> master
+
+	
+
 		}
 	);
 
