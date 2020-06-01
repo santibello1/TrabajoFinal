@@ -76,3 +76,28 @@ p button.iniciarSesion:hover {
   background-color: #f2f2f2;
   color: #ff4949;
 }
+
+button.usuarioerror {
+  background-color: #ff4949;
+
+  font-family: 'ABeeZee';
+  border: none;
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+}
+
+button.usuarioerror:hover {
+  background-color: #f2f2f2;
+ 
+}
+
+a.loginnuevo { 
+  text-decoration: none;
+
+  color:#f2f2f2;
+}
+
+a.loginnuevo:hover {
+  color: #ff4949;
+}

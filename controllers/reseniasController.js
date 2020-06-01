@@ -45,12 +45,12 @@ const controller = {
                                 return res.redirect('/movies/detallePelis?id=' + req.body.id_pelicula);
                             })
                     } else {
-                        return res.send('La password está errada')
+                        return res.render('passworderror')
                         //hay que crear una vista para esto o mandarlo a login
                     }
                 })
             } else {
-                return res.send('El usuairo no existe')
+                return res.render('noExisteUsuario')
                 //hay que crear una vista para esto o mandarlo a login
 
             }
