@@ -50,19 +50,15 @@ let ubuscacor={
               email:{ [OP.like]: '%' + req.params.usuario + '%'}
            },
         
-        }  )
+        })
         
-        .then(
-            
-            function(userbuscado){
-               
-         res.render('userdetalles',{user:userbuscado})
-           },
-           )
+        .then(function(userbuscado){
+            res.render('userdetalles',{user:userbuscado})
+        })
      
-         .catch(function(error){
+        .catch(function(error){
               return res.send(error)
-          })
+        })
 
     },
 }
