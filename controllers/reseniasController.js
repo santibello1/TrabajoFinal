@@ -59,7 +59,20 @@ const controller = {
         .catch(function(error){
             return res.send(error)
         })
-    }
+    },
+
+// tomar las reseñas co el mismo movie id para llevarlas a detalle pelis
+enPelicula:  (req, res) => {
+ DB.Resenias
+    .findAll({
+     where:
+     { id_pelicula : req.params.id }
+ })
+.then ( (resenias) => {
+    return res.render('detallePelis', {resenias})
+})
+}
+    
 };
 
 

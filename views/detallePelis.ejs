@@ -37,10 +37,26 @@
       <h2 class="reseniastitle">  Reseñas  </h2>
      
       <div class="reseniasCont">
-      
-        <ul class="reseniasSection" >
 
-          <li>aca van las reseñas</li>
+        <ul class="reseniasSection" >
+      
+       <% for (let i=0 ; i < resenias.length ; i ++){ %>
+      
+          <% if (resenias[i].length == 0) { %>
+            <li> 
+              'Todvia no hay reseñnas para esta película'
+            
+            <br>
+           
+          <% } else { %>
+            <%= resenias[i].usuario.nombre_de_usuario %>
+          <% } %>
+
+
+
+
+       }
+
 
          
           
