@@ -30,7 +30,7 @@ module.exports = function (sequelize, DataTypes) {
 	resenia.associate = function(models){
 		resenia.belongsTo(models.Usuarios, {
 			as: 'usuario',
-			foreignkey: 'id_usuario' 
+			foreignKey: 'id_usuario' 
 		});
 	}
 
