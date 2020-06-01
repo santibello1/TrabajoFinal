@@ -8,3 +8,8 @@ esto es lo que deberia ir en detalle pelis para que muestre las resenias
           <% } %>
  let enlaceMostrar = document.querySelector('.listadoResenias');
         enlaceMostrar.href += ('?id=' + queryString.get('id'));
+
+para q t mande al lugar d dde venias
+backURL=req.header('Referer') || '/';
+ res.redirect(backURL); 
+        

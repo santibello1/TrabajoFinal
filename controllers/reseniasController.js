@@ -69,7 +69,8 @@ enPelicula:  (req, res) => {
      { id_pelicula : req.params.id }
  })
 .then ( (resenias) => {
-    return res.render('detallePelis', {resenias})
+   console.log(resenias)
+    return res.render('detallePelis', {resenias: resenias})
 })
 }
     
