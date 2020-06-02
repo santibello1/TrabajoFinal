@@ -62,7 +62,7 @@ const controller = {
             ]
         })
         .then(resultado => {
-            res.render('editReview', { resultado });
+            res.render('editarResenia', { resultado });
         })
     },
 
