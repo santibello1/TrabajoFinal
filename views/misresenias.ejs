@@ -25,8 +25,8 @@
           <li style="text-align: center;"> <%=resultado[i].texto_resenia %> </li>
           <li style="text-align: center;"> <b> puntaje: </b> <%=resultado[i].puntaje_pelicula %> </li>
           <li><a href="/resenias/detallePelis/<%=resultado[i].id_pelicula%>?id=<%=resultado[i].id_pelicula%>" class="reseniasa">  <b> Ver pelicula   </b></a></li>
-          <li></li><a href="/misresenias/editar/<%=resultado[i].id_resenia%>" class="reseniasa">Editar</a></li>
-          <li></li><a href="/misresenias/borrar/<%=resultado[i].id_resenia%>" class="reseniasa">Eliminar</a></li>
+          <li></li><a href="/misresenias/editar/<%=resultado[i].id%>" class="reseniasa">Editar</a></li>
+          <li></li><a href="/misresenias/borrar/<%=resultado[i].id%>" class="reseniasa">Eliminar</a></li>
         </ul>
       <% } %>
     <% } %>

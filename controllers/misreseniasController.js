@@ -44,7 +44,7 @@ const controller = {
 
         .then(resultado => {
 
-            console.log(resultado)
+           // return res.send(resultado)
 
             if (resultado.length == 0) {
                 res.render('misresenias', {resultado: 'todavia no hiciste reseñas'})

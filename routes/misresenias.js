@@ -8,7 +8,6 @@ router.get('/', function(req, res) {
 
 router.post('/',  controller.verifyUser); 
 
-router.get('/:id', controller.getreviews); //listado mis resenias
 
 router.get('/editar/:id', controller.showEdit); //formulario para editar una resenia
 
@@ -17,6 +16,9 @@ router.post('/editar/:id', controller.confirmEdit); //procesa la edicion d una r
 router.get('/borrar/:id', controller.deleteReview); // formulario para confirmar el delete de una resenia
 
 router.post('/borrar/:id', controller.confirmDelete); // procesa el delete d una resenia
+
+router.get('/:id', controller.getreviews); //listado mis resenias
+
 
 
 module.exports = router;
