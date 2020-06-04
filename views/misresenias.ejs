@@ -5,7 +5,7 @@
     <title>Mis reseñas</title>
     <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
-    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/misresenias.css">
     <link rel="stylesheet" href="/css/carrousel.css">
     <link rel="stylesheet" href="/css/headerfooter.css">
     
@@ -21,12 +21,12 @@
       <% if (resultado[i] == 'todavia no hiciste reseñas'  ) { %>
         <p style="text-align: center;"><%= resultado[i] %></p>
       <% } else { %>
-        <ul >
+        <ul class="reseniassection" >
           <li style="text-align: center;"> <%=resultado[i].texto_resenia %> </li>
-          <li style="text-align: center;"> puntaje: <%=resultado[i].puntaje_pelicula %> </li>
-          <li><a href="/resenias/detallePelis/<%=resultado[i].id_pelicula%>?id=<%=resultado[i].id_pelicula%>">Ver pelicula</a></li>
-          <li></li><a href="/misresenias/editar/<%=resultado[i].id_resenia%>">Editar</a></li>
-          <li></li><a href="/misresenias/borrar/<%=resultado[i].id_resenia%>">Eliminar</a></li>
+          <li style="text-align: center;"> <b> puntaje: </b> <%=resultado[i].puntaje_pelicula %> </li>
+          <li><a href="/resenias/detallePelis/<%=resultado[i].id_pelicula%>?id=<%=resultado[i].id_pelicula%>" class="reseniasa">  <b> Ver pelicula   </b></a></li>
+          <li></li><a href="/misresenias/editar/<%=resultado[i].id_resenia%>" class="reseniasa">Editar</a></li>
+          <li></li><a href="/misresenias/borrar/<%=resultado[i].id_resenia%>" class="reseniasa">Eliminar</a></li>
         </ul>
       <% } %>
     <% } %>

@@ -100,3 +100,29 @@ a.loginnuevo {
 a.loginnuevo:hover {
   color: #ff4949;
 }
+
+button.crear{
+  background-color: #ff4949;
+  color:#f2f2f2;
+  font-family: 'ABeeZee';
+  border: none;
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  margin-left: 80px;
+}
+
+button.crear:hover{
+  background-color: #f2f2f2;
+  color: #ff4949;
+}
+
+a.noexistea{
+  text-decoration:none;
+  color:#f2f2f2;
+}
+
+a.noexistea:hover{
+  text-decoration:none;
+  color: #ff4949;
+}
