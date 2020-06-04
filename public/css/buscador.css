@@ -150,10 +150,12 @@ li.mySlides1 {
   height: 30px;
   width: 500px;
   text-align: center;
+
+
 }
 
-.buscarform{
-  margin-left: 550px;
+.buscarformusuario{
+ margin-left: 400px;
 }
 
  p button{
@@ -164,8 +166,37 @@ li.mySlides1 {
   width: 120px;
   height: 40px;
   border-radius: 20px;
+  margin-left: 190px;
 }
  p button :hover {
   background-color: #f2f2f2;
   color: #ff4949;
+}
+
+ul li a.mailsencontrados{
+  text-decoration: none;
+  font-family: 'ABeeZee';
+  color: #ff4949;
+}
+
+ul li a.mailsencontrados:hover{
+ color: #f2f2f2;
+}
+
+ul.detalleusuarioencontrado{
+  font-family: 'ABeeZee';
+  color: #ff4949;
+}
+
+@media (min-width: 481px) and (max-width: 767px)  {
+
+.buscarformusuario{
+  margin-left:200px;
+  background-color: black;
+}
+
+
+
+
+
 }
