@@ -1,42 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="editarResenia">
-        <form action="/misresenias/editar/<%=resultado.id %>" method="POST">
-            <h1>Editar Resenia</h1>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Editar Reseña</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/headerfooter.css">
+  </head>
+  <body>
+    <h1>Editar Reseña  </h1>
+    <form class="logIn" name="crearResenia" action="
+    /misresenias/editar/<%=resultado.id %>" method="POST">
 
-            <div>
-                <input type="text" name="email" id="email" placeholder="email">
-            </div>
-            <div>
-                <input type="password" id="password" name="password" placeholder="password">
-            </div>
-            <div>
-                <label for="resenia">Resenia</label>
-                <textarea name="resenia" id="resenia" cols="30" rows="5">
-                    <%= resultado.texto_resenia%>
-                </textarea>
-            </div>
-            <div>
-                <label for="resenia">Puntaje</label>
-                <input type="range" id="puntaje" min="0" max="5" onchange="updateValue(this.value)" value="<%=resultado.puntaje_pelicula%>">
-                <p id="valorRange"> <%= resultado.puntaje_pelicula%> </p>
-            </div>
+      <p><input class="mail" type="email" name="email" value="" placeholder="Ingrese su email"></p>
+      <p><input type="password" name="password" placeholder="Ingrese su contraseña"></p>
+      <p> <textarea name="texto_resenia" id="" cols="60" rows="10" placeholder="Ingrese su reseña aquí"><%= resultado.texto_resenia%></textarea></p>
+      <p><label for="puntaje_pelicula">Estrellas:</label></p>
+      <p>  <select name="puntaje_pelicula">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </p>
 
-            <button type="submit" class="editarResenia" name="button">Enviar</button>
+      
+      
 
-        </form>
-    </div>
+
+      <p><button type="submit" class="iniciarSesion" >Editar Reseña</button></p>
+
+    </form>
+
     <%- include('./partials/footer')%>
 
-  
-
-</body>
+  </body>
 </html>
+<script type="text/javascript" src="/js/login.js">
 
-<script type="text/javascript" src="/routes/misresenias.js"></script>
+</script>
+
+
+
+
