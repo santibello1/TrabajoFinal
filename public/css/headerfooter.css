@@ -164,6 +164,9 @@ a.iconmenu{
   display: none;
 }
 
+div #myLinks{
+  margin: 0 10px 0 0;
+}
 
 @media only screen and (max-device-width: 800px){
     a.iconmenu{
