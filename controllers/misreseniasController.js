@@ -67,25 +67,34 @@ const controller = {
     },
 
     confirmEdit: function (req, res) {
-        moduloLogin.validar(req.body.email, req.body.password)
-        .then (resultado => {
-            if( resultado != undefined ) {
-                DB.Resenias.update({
-                    texto_resenia: req.body.texto_resenia,
-                    puntaje_pelicula: req.body.puntaje_pelicula,
-                }, {
-                    where: {
-                        id: req.params.id,
-                    }
+      
+      moduloLogin.chequearUsuario(req.body.email)
+      .then(function(existeUsuario){
+          if (existeUsuario){
+              moduloLogin.buscarPorEmail(req.body.email)
+              .then(usuario =>{
+                  let validPass = bcrypt.compareSync(req.body.password, usuario.password);
+                  if (validPass){
+                    DB.Resenias
+                    .update({
+                        texto_resenia: req.body.texto_resenia,
+                        puntaje_pelicula: req.body.puntaje_pelicula,
+                    }, {
+                        where: {
+                            id: req.params.id,
+                        }
+                    })
+             .then(reseniaeditada =>{
+                res.redirect('/misresenias')
+             })
+            } 
+            else {
+                        return res.redirect('/misresenias')
+                     }
+                  })
+              }
                 })
-                .then(() => {
-                    res.redirect('/misresenias/' + resultado.id)
-                })
-            } else {
-                return res.redirect('/misresenias/editar/' + req.params.id)
-            }
-            
-        })
+          
     },
 
     deleteReview: function (req, res){
