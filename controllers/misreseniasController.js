@@ -98,21 +98,30 @@ const controller = {
     },
 
     deleteReview: function (req, res){
-        res.render('loginEliminarResenias', { eliminarId: req.params.idn});
+        res.render('loginEliminarResenias', { eliminarId: req.params.id});
     },
 
     confirmDelete: function (req, res) {
-        moduloLogin.validar(req.body.email, req.body.password)
-        .then(resultado => {
-            if(resultado){
-                DB.Resenias.destroy({
-                where: {
-                    id:req.params.id,
+        moduloLogin.validar(req.body.email)
+        .then(existeUsuario => {
+            if(existeUsuario){
+                moduloLogin.buscarPorEmail(req.body.email)
+                .then(usuario => {
+                    let validaPass = bcrypt.compareSync(req.body.password, usuario.password);
+                if(validaPass){
+                    DB.Resenias.destroy({
+                        where: {
+                            id:req.params.id
+                        }
+                    })
+                    .then(reseniadestruida =>{
+                        res.redirect('/misresenias');
+                    })
                 }
-            })
-            res.redirect('/misresenias/' + resultado.id);
+                }
+                )
         } else {
-            res.redirect ('/misresenias/borrar' + req.params.id);
+            res.redirect ('/misresenias');
         }
         })
     }
