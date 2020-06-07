@@ -126,3 +126,8 @@ a.noexistea:hover{
   text-decoration:none;
   color: #ff4949;
 }
+
+.menuGrande {
+  text-decoration: none;
+  list-style: none;
+}
