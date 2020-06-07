@@ -101,34 +101,33 @@ const controller = {
     },
 
     confirmDelete: function (req, res) {
-        moduloLogin.validar(req.body.email, req.body.password)
-        .then(existeUsuario => {
-            return res.send(existeUsuario)
-            if(existeUsuario){
-                return res.send ('existe el usuario')
+        moduloLogin.chequearUsuario(req.body.email)
+        .then(function(existeUsuario){
+              if (existeUsuario){
                 moduloLogin.buscarPorEmail(req.body.email)
-                .then(usuario => {
-                     let validaPass = bcrypt.compareSync(req.body.password, usuario.password);
-                 if(validaPass){
-                    //return res.send ('existe el usuario')
-                    DB.Resenias.destroy({
-                        where: {
-                            id:req.params.id
-                        }
-                    })
-                    .then(reseniadestruida =>{
-                        res.redirect('/misresenias');
-                    })
-                }
-                })
-            } else {
-                return res.send ('no valido el usuario')
-                res.redirect ('/misresenias');
-            }
-        })
+                  .then(usuario =>{
+                      let validPass = bcrypt.compareSync(req.body.password, usuario.password);
+                      if (validPass){
+                        DB.Resenias.destroy({
+                            where: {
+                                id:req.params.id
+                            }
+                        })
+                        .then(reseniadestruida =>{
+                            res.redirect('/misresenias');
+                        })
+                    } else {
+                        res.redirect ('/misresenias');
+                    }
+                  })
+              }
+          })
+
     },
 
 };
 
 
 module.exports = controller;
+
+
