@@ -22,7 +22,7 @@ const controller = {
                     }
                 })
             } else {
-                return res.send ('noExisteUsuario')
+                return res.redirect ('/misresenias')
                 //hay que crear una vista para esto o mandarlo a signin
         
             }
@@ -47,7 +47,7 @@ const controller = {
            // return res.send(resultado)
 
             if (resultado.length == 0) {
-                res.render('misresenias', {resultado: 'todavia no hiciste reseñas'})
+                res.render('misresenias', {resultado: ['todavia no hiciste reseñas']})
             }
             else {
                 res.render('misresenias', {resultado: resultado})
