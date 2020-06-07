@@ -120,7 +120,12 @@ const controller = {
                         res.redirect ('/misresenias');
                     }
                   })
-              }
+                } else {
+                    return res.redirect ('/misresenias')
+                    //hay que crear una vista para esto o mandarlo a signin
+            
+                }
+                    
           })
 
     },
