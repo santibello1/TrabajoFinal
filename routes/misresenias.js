@@ -8,7 +8,6 @@ router.get('/', function(req, res) {
 
 router.post('/',  controller.verifyUser); 
 
-
 router.get('/editar/:id', controller.showEdit); //formulario para editar una resenia
 
 router.post('/editar/:id', controller.confirmEdit); //procesa la edicion d una resenia

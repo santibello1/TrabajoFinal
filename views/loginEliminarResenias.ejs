@@ -11,7 +11,7 @@
   <body>
     <%- include('./partials/header')%>
     <h1 style="margin-top: 100px;"> Confirme su usuario para eliminar la reseña</h1>
-    <form class="logIn" name="" action="/misresenias/borrar/<%=eliminarId%>" method="POST">
+    <form class="logIn" method="POST" name="" action="/misresenias/borrar/<%=eliminarId%>" >
 
       <p><input class="mail" type="email" name="email" value="" placeholder="Ingrese su email"></p>
       <p><input type="password" name="password" placeholder="Ingrese su contraseña"></p>

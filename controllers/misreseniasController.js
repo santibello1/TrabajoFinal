@@ -103,6 +103,7 @@ const controller = {
     confirmDelete: function (req, res) {
         moduloLogin.validar(req.body.email, req.body.password)
         .then(existeUsuario => {
+            return res.send(existeUsuario)
             if(existeUsuario){
                 return res.send ('existe el usuario')
                 moduloLogin.buscarPorEmail(req.body.email)
