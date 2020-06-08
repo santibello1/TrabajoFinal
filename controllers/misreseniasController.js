@@ -23,7 +23,7 @@ const controller = {
                 })
             } else {
                 return res.redirect ('/misresenias')
-                //hay que crear una vista para esto o mandarlo a signin
+               
         
             }
                 
@@ -122,7 +122,7 @@ const controller = {
                   })
                 } else {
                     return res.redirect ('/misresenias')
-                    //hay que crear una vista para esto o mandarlo a signin
+                    
             
                 }
                     
